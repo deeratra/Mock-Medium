@@ -5,7 +5,6 @@ This project is a mock website inspired by Medium, implemented with separate fro
 - [Overview](#overview)
 - [Project Structure](#project-structure)
 - [Technologies Used](#technologies-used)
-- [Installation](#installation)
 
 
 ## Overview
