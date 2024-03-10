@@ -21,7 +21,7 @@ The project consists of three main folders:
 
 2. **common**: Contains shared code and utilities used by both the frontend and backend components. This folder contain the common schema for the zod validation.
 
-3. **frontend**: Houses the frontend codebase developed using React and created with Vite for faster development and better performance. The frontend is responsible for rendering the user interface and interacting with the backend API.
+3. **frontend**: Houses the frontend codebase developed using React and created with Vite for faster development and better performance. The frontend is responsible for rendering the user interface and interacting with the backend API and deployed on vercel.
 
 ## Technologies Used
 
