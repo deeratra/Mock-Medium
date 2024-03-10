@@ -1,28 +1,29 @@
-import z from "zod"
+import z from "zod";
 
-export const userSchema = z.object({
-    email: z.string().email(),
-    password: z.string().min(8),
+export const signupInput = z.object({
+    username: z.string().email(),
+    password: z.string().min(6),
     name: z.string().optional()
 })
 
-export type UserSchema = z.infer<typeof userSchema>
+export type SignupInput = z.infer<typeof signupInput>
 
-
-export const createPostSchema = z.object({
-    tilte: z.string(),
-    content: z.string(),
-    published: z.string().optional()
+export const signinInput = z.object({
+    username: z.string().email(),
+    password: z.string().min(6),
 })
 
-export type CreatePostSchema = z.infer<typeof createPostSchema>
+export type SigninInput = z.infer<typeof signinInput>
 
-
-export const updatePostSchema = z.object({
-    id: z.string(),
-    tilte: z.string(),
+export const createBlogInput = z.object({
+    title: z.string(),
     content: z.string(),
-    published: z.string().optional()
 })
+export type CreateBlogInput = z.infer<typeof createBlogInput>
 
-export type UpdatePostSchema = z.infer<typeof updatePostSchema>
+export const updateBlogInput = z.object({
+    title: z.string(),
+    content: z.string(),
+    id: z.number()
+})
+export type UpdateBlogInput = z.infer<typeof updateBlogInput>

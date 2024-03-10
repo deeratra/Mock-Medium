@@ -1,46 +1,51 @@
 import z from "zod";
-export declare const userSchema: z.ZodObject<{
-    email: z.ZodString;
+export declare const signupInput: z.ZodObject<{
+    username: z.ZodString;
     password: z.ZodString;
     name: z.ZodOptional<z.ZodString>;
 }, "strip", z.ZodTypeAny, {
-    email: string;
+    username: string;
     password: string;
     name?: string | undefined;
 }, {
-    email: string;
+    username: string;
     password: string;
     name?: string | undefined;
 }>;
-export type UserSchema = z.infer<typeof userSchema>;
-export declare const createPostSchema: z.ZodObject<{
-    tilte: z.ZodString;
-    content: z.ZodString;
-    published: z.ZodOptional<z.ZodString>;
+export type SignupInput = z.infer<typeof signupInput>;
+export declare const signinInput: z.ZodObject<{
+    username: z.ZodString;
+    password: z.ZodString;
 }, "strip", z.ZodTypeAny, {
-    tilte: string;
-    content: string;
-    published?: string | undefined;
+    username: string;
+    password: string;
 }, {
-    tilte: string;
-    content: string;
-    published?: string | undefined;
+    username: string;
+    password: string;
 }>;
-export type CreatePostSchema = z.infer<typeof createPostSchema>;
-export declare const updatePostSchema: z.ZodObject<{
-    id: z.ZodString;
-    tilte: z.ZodString;
+export type SigninInput = z.infer<typeof signinInput>;
+export declare const createBlogInput: z.ZodObject<{
+    title: z.ZodString;
     content: z.ZodString;
-    published: z.ZodOptional<z.ZodString>;
 }, "strip", z.ZodTypeAny, {
-    tilte: string;
+    title: string;
     content: string;
-    id: string;
-    published?: string | undefined;
 }, {
-    tilte: string;
+    title: string;
     content: string;
-    id: string;
-    published?: string | undefined;
 }>;
-export type UpdatePostSchema = z.infer<typeof updatePostSchema>;
+export type CreateBlogInput = z.infer<typeof createBlogInput>;
+export declare const updateBlogInput: z.ZodObject<{
+    title: z.ZodString;
+    content: z.ZodString;
+    id: z.ZodNumber;
+}, "strip", z.ZodTypeAny, {
+    title: string;
+    content: string;
+    id: number;
+}, {
+    title: string;
+    content: string;
+    id: number;
+}>;
+export type UpdateBlogInput = z.infer<typeof updateBlogInput>;
